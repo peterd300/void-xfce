@@ -12,6 +12,9 @@ configs:
       width: 1920
       height: 1080
   icons:
+    ? "/home/peter/Desktop/PRO-dark-XFCE-4.14.tar.xz?response-content-disposition=attachment;%20PRO-dark-XFCE-4.14.tar.xz&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=RWJAQUNCHT7V2NCLZ2AL%2F20260905%2Fus-east-1%2Fs3%2Faw"
+    : row: 4
+      col: 0
     "/":
       row: 1
       col: 0
@@ -20,6 +23,9 @@ configs:
       col: 0
     "/home/peter":
       row: 0
+      col: 0
+    "/home/peter/Desktop/1207818":
+      row: 3
       col: 0
     "2025-02-02-00-10-00-00":
       row: 3
