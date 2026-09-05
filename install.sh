@@ -209,6 +209,22 @@ sleep 2
 
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
+echo "[12/15] Installing Kora icons theme..." | tee -a "$LOG_FILE"
+echo "========================================================================================================" >> "$LOG_FILE" 2>&1
+
+mkdir -p icons
+cd icons
+git clone https://github.com/bikass/kora.git
+sudo mv kora/kora/ /usr/share/icons/
+sudo mv kora/kora-pgrey/ /usr/share/icons/
+cd ..
+rm -rf icons
+
+
+
+
+
+echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 echo "[13/15] Customizing interactive shells (Fish & other components)..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
