@@ -9,16 +9,22 @@
       <property name="position" type="string" value="p=8;x=960;y=1065"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="icon-size" type="uint" value="20"/>
-      <property name="size" type="uint" value="30"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="size" type="uint" value="35"/>
       <property name="plugin-ids" type="array">
+        <value type="int" value="18"/>
         <value type="int" value="1"/>
         <value type="int" value="4"/>
-        <value type="int" value="16"/>
+        <value type="int" value="17"/>
+        <value type="int" value="11"/>
+        <value type="int" value="14"/>
+        <value type="int" value="15"/>
+        <value type="int" value="21"/>
+        <value type="int" value="22"/>
         <value type="int" value="2"/>
-        <value type="int" value="3"/>
         <value type="int" value="5"/>
         <value type="int" value="6"/>
+        <value type="int" value="19"/>
         <value type="int" value="7"/>
         <value type="int" value="8"/>
         <value type="int" value="9"/>
@@ -45,10 +51,6 @@
       <property name="show-wireframes" type="bool" value="true"/>
       <property name="sort-order" type="uint" value="4"/>
     </property>
-    <property name="plugin-3" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
     <property name="plugin-4" type="string" value="pager">
       <property name="rows" type="uint" value="1"/>
       <property name="miniature-view" type="bool" value="false"/>
@@ -56,11 +58,16 @@
     </property>
     <property name="plugin-5" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="gpick"/>
         <value type="string" value="geany"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="CopyQ_copyq"/>
       </property>
     </property>
     <property name="plugin-7" type="string" value="separator">
@@ -68,7 +75,7 @@
     </property>
     <property name="plugin-8" type="string" value="clock">
       <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-font" type="string" value="Sans Bold 8"/>
+      <property name="digital-time-font" type="string" value="Iosevka Nerd Font Mono Medium 12"/>
       <property name="timezone" type="string" value="Europe/Amsterdam"/>
     </property>
     <property name="plugin-9" type="string" value="separator">
@@ -78,10 +85,71 @@
       <property name="button-title" type="uint" value="1"/>
       <property name="appearance" type="uint" value="1"/>
     </property>
-    <property name="plugin-16" type="string" value="launcher">
+    <property name="plugin-11" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="17885206265.desktop"/>
-        <value type="string" value="17885206976.desktop"/>
+        <value type="string" value="17886152421.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-14" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17886152662.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-15" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17886153043.desktop"/>
+      </property>
+      <property name="show-label" type="bool" value="false"/>
+    </property>
+    <property name="plugin-17" type="string" value="separator"/>
+    <property name="plugin-18" type="string" value="whiskermenu">
+      <property name="menu-height" type="int" value="600"/>
+      <property name="launcher-icon-size" type="int" value="2"/>
+      <property name="category-icon-size" type="int" value="2"/>
+      <property name="button-icon" type="string" value="void-logo"/>
+      <property name="recent" type="array">
+        <value type="string" value="xfce4-screensaver-preferences.desktop"/>
+        <value type="string" value="xscreensaver-settings.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-19" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+    </property>
+    <property name="plugin-21" type="string" value="separator"/>
+    <property name="plugin-22" type="string" value="weather">
+      <property name="location" type="empty">
+        <property name="name" type="string" value="Scheveningen, Den Haag"/>
+        <property name="latitude" type="string" value="52.106745"/>
+        <property name="longitude" type="string" value="4.273694"/>
+      </property>
+      <property name="msl" type="int" value="6"/>
+      <property name="timezone" type="string" value="Europe/Amsterdam"/>
+      <property name="offset" type="string" value="+02:00"/>
+      <property name="cache-max-age" type="int" value="172800"/>
+      <property name="power-saving" type="bool" value="true"/>
+      <property name="units" type="empty">
+        <property name="temperature" type="int" value="0"/>
+        <property name="pressure" type="int" value="0"/>
+        <property name="windspeed" type="int" value="0"/>
+        <property name="precipitation" type="int" value="0"/>
+        <property name="altitude" type="int" value="0"/>
+        <property name="apparent-temperature" type="int" value="2"/>
+      </property>
+      <property name="round" type="bool" value="true"/>
+      <property name="single-row" type="bool" value="true"/>
+      <property name="tooltip-style" type="int" value="1"/>
+      <property name="forecast" type="empty">
+        <property name="layout" type="int" value="1"/>
+        <property name="days" type="int" value="5"/>
+      </property>
+      <property name="theme-dir" type="string" value="/usr/share/xfce4/weather/icons/liquid"/>
+      <property name="scrollbox" type="empty">
+        <property name="show" type="bool" value="true"/>
+        <property name="animate" type="bool" value="true"/>
+        <property name="lines" type="int" value="1"/>
+        <property name="color" type="string" value="rgba(0,0,0,0)"/>
+        <property name="use-color" type="bool" value="false"/>
+        <property name="font" type="string" value="Sans 10"/>
       </property>
     </property>
   </property>

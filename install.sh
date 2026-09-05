@@ -65,18 +65,18 @@ sleep 2
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 echo "[4.1/15] Installing Xorg server ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-sudo xbps-install -Sy xorg xorg-server xorg-apps xrandr xterm xscreensaver twm xinit xsel xclip xcolor >> "$LOG_FILE" 2>&1
+sudo xbps-install -Sy xorg xorg-server xorg-apps xrandr xterm twm xinit xsel xclip xcolor >> "$LOG_FILE" 2>&1
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 echo "[4.2/15] Installing X11 apps  ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-sudo xbps-install -Sy gpick CopyQ zathura zathura-cb zathura-pdf-mup >> "$LOG_FILE" 2>&1
+sudo xbps-install -Sy gpick CopyQ zathura zathura-cb zathura-pdf-mupdf >> "$LOG_FILE" 2>&1
 
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 echo "[4.3/15] Installing XFCE4  and plugins ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-sudo xbps-install -Sy xfce4 xfce4-whiskermenu-plugin xfce4-sensors-plugin xfce4-panel-appmenu xfce4-pulseaudio-plugin xfce4-alsa-plugin xfce4-clipman-plugin xfce4-weather-plugin >> "$LOG_FILE" 2>&1
+sudo xbps-install -Sy xfce4 xfce4-whiskermenu-plugin xfce4-sensors-plugin xfce4-panel-appmenu xfce4-pulseaudio-plugin  xfce4-clipman-plugin xfce4-weather-plugin >> "$LOG_FILE" 2>&1
 
 
 
