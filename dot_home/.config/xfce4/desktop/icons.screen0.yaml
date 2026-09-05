@@ -15,6 +15,13 @@ configs:
     "/":
       row: 1
       col: 0
+    "trash:///":
+      row: 2
+      col: 0
     "/home/peter":
       row: 0
       col: 0
+    "2025-02-02-00-10-00-00":
+      row: 3
+      col: 0
+      last_seen: 1788607422896747

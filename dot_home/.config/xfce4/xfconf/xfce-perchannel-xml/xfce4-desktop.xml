@@ -10,9 +10,15 @@
     <property name="screen0" type="empty">
       <property name="monitorVirtual-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/peter/dotfiles/dot_home/.wallpaper/minimal-life-landscape.jpg"/>
+          <property name="last-image" type="string" value="/home/peter/.config/wallpaper/2229374.png"/>
         </property>
       </property>
+    </property>
+  </property>
+  <property name="desktop-icons" type="empty">
+    <property name="show-hidden-files" type="bool" value="false"/>
+    <property name="file-icons" type="empty">
+      <property name="show-device-removable" type="bool" value="false"/>
     </property>
   </property>
 </channel>

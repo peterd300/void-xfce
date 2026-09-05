@@ -227,6 +227,6 @@ echo "[14/15] Deploying customized dotfiles and configuration sets..." | tee -a 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
-    cp -Rv ~/dotfiles/dot_home/.* ~/.
+    cp -Rv ~/void-xfce/dot_home/.* ~/.
 ) >> "$LOG_FILE" 2>&1
 sleep 1
