@@ -74,21 +74,13 @@ sudo xbps-install -Sy gpick CopyQ zathura zathura-cb zathura-pdf-mupdf >> "$LOG_
 
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-echo "[4.3/15] Installing XFCE4  and plugins ..." | tee -a "$LOG_FILE"
+echo "[4.3/15] Installing XFCE4 and plugins ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
+
+(
 sudo xbps-install -Sy xfce4 xfce4-whiskermenu-plugin xfce4-sensors-plugin xfce4-panel-appmenu xfce4-pulseaudio-plugin  xfce4-clipman-plugin xfce4-weather-plugin >> "$LOG_FILE" 2>&1
 
-
-
-
-
-
-
-
-
-
-
-
+) >> "$LOG_FILE" 2>&1
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 echo "[5/15] Creating X11 environment configuration (.xinitrc)..." | tee -a "$LOG_FILE"
