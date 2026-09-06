@@ -1,4 +1,4 @@
-./install.log
-~/.ssh
-./fonts
-./icons
+install.log
+.ssh/
+fonts/
+icons/
