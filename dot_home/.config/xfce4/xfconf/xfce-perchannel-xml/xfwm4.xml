@@ -30,10 +30,10 @@
     <property name="frame_border_top" type="int" value="0"/>
     <property name="full_width_title" type="bool" value="true"/>
     <property name="horiz_scroll_opacity" type="bool" value="false"/>
-    <property name="inactive_opacity" type="int" value="100"/>
+    <property name="inactive_opacity" type="int" value="98"/>
     <property name="maximized_offset" type="int" value="0"/>
     <property name="mousewheel_rollup" type="bool" value="true"/>
-    <property name="move_opacity" type="int" value="100"/>
+    <property name="move_opacity" type="int" value="99"/>
     <property name="placement_mode" type="string" value="center"/>
     <property name="placement_ratio" type="int" value="20"/>
     <property name="popup_opacity" type="int" value="100"/>
@@ -59,10 +59,10 @@
     <property name="snap_to_windows" type="bool" value="false"/>
     <property name="snap_width" type="int" value="10"/>
     <property name="vblank_mode" type="string" value="auto"/>
-    <property name="theme" type="string" value="Prof--XFCE- 2.1"/>
+    <property name="theme" type="string" value="Win11-round-Dark"/>
     <property name="tile_on_move" type="bool" value="true"/>
     <property name="title_alignment" type="string" value="center"/>
-    <property name="title_font" type="string" value="Sans Bold 9"/>
+    <property name="title_font" type="string" value="IosevkaTerm Nerd Font Propo Medium 10"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
     <property name="titleless_maximize" type="bool" value="false"/>
     <property name="title_shadow_active" type="string" value="false"/>
@@ -77,7 +77,7 @@
     <property name="wrap_cycle" type="bool" value="true"/>
     <property name="wrap_layout" type="bool" value="true"/>
     <property name="wrap_resistance" type="int" value="15"/>
-    <property name="wrap_windows" type="bool" value="true"/>
+    <property name="wrap_windows" type="bool" value="false"/>
     <property name="wrap_workspaces" type="bool" value="false"/>
     <property name="zoom_desktop" type="bool" value="true"/>
     <property name="zoom_pointer" type="bool" value="true"/>

@@ -9,7 +9,12 @@ echo "Please enter your sudo password to begin the installation:"
 sudo -v
 
 # Keep-alive: update user's sudo timestamp until the script finishes
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while kill -0 "$$" 2>/dev/null ; do
+	sudo -v
+    sleep 30
+done & 
+
+
 
 echo "============================================================================="
 echo " Starting Void Linux & Openbox Installer "
@@ -117,7 +122,7 @@ echo "[8.1/15] Installing some X11 applications..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
-    sudo xbps-install -Sy adwaita-plus falkon kitty flameshot gmrun xbindkeys xdotool xev gpick
+    sudo xbps-install -Sy falkon kitty flameshot gmrun xbindkeys xdotool xev gpick
     mkdir -p ~/screenshots
 ) >> "$LOG_FILE" 2>&1
 
@@ -147,15 +152,25 @@ echo "==========================================================================
 ) >> "$LOG_FILE" 2>&1
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-echo "[11/15] Install XFCE Themes..." | tee -a "$LOG_FILE"
+echo "[11/15] Install XFCE Themes + Icons..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 (
-	cd themes
+	cd themes-icons
+	# extract themes
 	tar -xvf Prof-XFCE-2.1.tar.gz 
-	tar -xvf PRO-dark-XFCE-4.14.tar.xz
+	tar -xvf Win11-round.tar.xz
+	tar -xvf Win11-round-Dark.tar.xz 
+	tar -xvf Win11-round-Light.tar.xz
+	
+	# extract icons
+	tar -xvf 01-Tela.tar.xz 
+		
+	mkdir -p ~/.local/share/icons
 	mkdir -p ~/.local/share/themes/
-	mv PRO-dark-XFCE-4.14/  ~/.local/share/themes/
 	mv Prof--XFCE-\ 2.1/ ~/.local/share/themes/
+	mv Win11-round*/ ~/.local/share/themes/
+	sudo mv Tela*/ /usr/share/icons/
+	
 	cd ..
 	
 
