@@ -72,14 +72,9 @@ echo "[4.1/15] Installing Xorg server ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 sudo xbps-install -Sy xorg xorg-server xorg-apps xrandr xterm twm xinit xsel xclip xcolor >> "$LOG_FILE" 2>&1
 
-echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-echo "[4.2/15] Installing X11 apps  ..." | tee -a "$LOG_FILE"
-echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-sudo xbps-install -Sy gpick CopyQ zathura zathura-cb zathura-pdf-mupdf >> "$LOG_FILE" 2>&1
-
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-echo "[4.3/15] Installing XFCE4 and plugins ..." | tee -a "$LOG_FILE"
+echo "[4.2/15] Installing XFCE4 and some plugins ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
@@ -122,7 +117,7 @@ echo "[8.1/15] Installing some X11 applications..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
-    sudo xbps-install -Sy falkon kitty flameshot gmrun xbindkeys xdotool xev gpick
+    sudo xbps-install -Sy falkon kitty flameshot gmrun xbindkeys xdotool xev gpick arandr gpick CopyQ zathura zathura-cb zathura-pdf-mupdf
     mkdir -p ~/screenshots
 ) >> "$LOG_FILE" 2>&1
 
@@ -179,7 +174,7 @@ echo "==========================================================================
 
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
-echo "[12.1/15] Awesome  fonts..." | tee -a "$LOG_FILE"
+echo "[12.1/15] Awesome fonts..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
@@ -257,7 +252,7 @@ echo "==========================================================================
     ./fish/install.sh
 
     # installing Bibita cursor
-    # ./bibita-cursor.sh
+    ./bibita-cursor.sh
 ) >> "$LOG_FILE" 2>&1
 
 
