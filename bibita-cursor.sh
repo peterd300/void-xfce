@@ -9,18 +9,20 @@ latest_version=v2.0.7
 mkdir -p ~/.local/share/icons
 
 wget https://github.com/ful1e5/Bibata_Cursor/releases/download/$latest_version/Bibata-Modern-Classic.tar.xz
-wget https://github.com/ful1e5/Bibata_Cursor/releases/download/$latest_version/Bibata-Modern-Ice-Right.tar.xz
+wget https://github.com/ful1e5/Bibata_Cursor/releases/download/$latest_version/Bibata-Modern-Ice.tar.xz
+
+
 
 # extract file with sleep , otherwise errors
 tar -xvf Bibata-Modern-Classic.tar.xz
 sleep 2                # extract `Bibata.tar.gz`
-tar -xvf Bibata-Modern-Ice-Right.tar.xz
+tar -xvf Bibata-Modern-Ice.tar.xz
 sleep 2
 
 
 # move files to local share
 mv Bibata-Modern-Classic/ ~/.local/share/icons/
-mv Bibata-Modern-Ice-Right/ ~/.local/share/icons/   # Install to local users
+mv Bibata-Modern-Ice/ ~/.local/share/icons/   # Install to local users
 
 # activate cursor for X11 
 echo "Xcursor.theme: Bibata-Modern-Classic" >> ~/.Xresources

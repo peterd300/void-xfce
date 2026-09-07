@@ -13,7 +13,6 @@
       <property name="size" type="uint" value="35"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="18"/>
-        <value type="int" value="1"/>
         <value type="int" value="4"/>
         <value type="int" value="17"/>
         <value type="int" value="11"/>
@@ -29,6 +28,7 @@
         <value type="int" value="8"/>
         <value type="int" value="9"/>
         <value type="int" value="10"/>
+        <value type="int" value="3"/>
       </property>
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="border-width" type="uint" value="1"/>
@@ -36,10 +36,6 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="applicationsmenu">
-      <property name="button-icon" type="string" value="application-x-executable"/>
-      <property name="show-generic-names" type="bool" value="false"/>
-    </property>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="uint" value="1"/>
       <property name="show-labels" type="bool" value="true"/>
@@ -67,6 +63,7 @@
         <value type="string" value="geany"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="flameshot"/>
         <value type="string" value="CopyQ_copyq"/>
       </property>
     </property>
@@ -108,9 +105,24 @@
       <property name="category-icon-size" type="int" value="2"/>
       <property name="button-icon" type="string" value="void-logo"/>
       <property name="recent" type="array">
+        <value type="string" value="org.flameshot.Flameshot.desktop"/>
         <value type="string" value="xfce4-screensaver-preferences.desktop"/>
-        <value type="string" value="xscreensaver-settings.desktop"/>
       </property>
+      <property name="view-mode" type="int" value="2"/>
+      <property name="position-categories-horizontal" type="bool" value="false"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="default-category" type="int" value="1"/>
+      <property name="menu-width" type="int" value="400"/>
+      <property name="menu-opacity" type="int" value="91"/>
+      <property name="launcher-show-name" type="bool" value="true"/>
+      <property name="launcher-show-tooltip" type="bool" value="false"/>
+      <property name="position-commands-alternate" type="bool" value="true"/>
+      <property name="button-single-row" type="bool" value="true"/>
+      <property name="show-command-lockscreen" type="bool" value="false"/>
+      <property name="show-command-logout" type="bool" value="false"/>
+      <property name="show-command-profile" type="bool" value="false"/>
+      <property name="show-command-menueditor" type="bool" value="false"/>
+      <property name="show-command-settings" type="bool" value="false"/>
     </property>
     <property name="plugin-19" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
@@ -139,7 +151,7 @@
       <property name="single-row" type="bool" value="true"/>
       <property name="tooltip-style" type="int" value="1"/>
       <property name="forecast" type="empty">
-        <property name="layout" type="int" value="1"/>
+        <property name="layout" type="int" value="0"/>
         <property name="days" type="int" value="5"/>
       </property>
       <property name="theme-dir" type="string" value="/usr/share/xfce4/weather/icons/liquid"/>
@@ -151,6 +163,9 @@
         <property name="use-color" type="bool" value="false"/>
         <property name="font" type="string" value="Sans 10"/>
       </property>
+    </property>
+    <property name="plugin-3" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
     </property>
   </property>
 </channel>
