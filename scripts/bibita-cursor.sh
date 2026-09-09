@@ -32,4 +32,3 @@ echo "Xcursor.theme: Bibata-Modern-Classic" >> ~/.Xresources
 
 rm -rf ./Bibata-Modern-*
 rm -rf ./Bibata-Modern-*.tar.xz
-

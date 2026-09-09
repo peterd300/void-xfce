@@ -17,7 +17,7 @@ sleep 1 && wireplumber &
 sleep 1 && pipewire-pulse & 
 
 # enable screensaver
-xscreensaver --no-splash &
+# xscreensaver --no-splash &
 
 # open default terminal
 kitty&
