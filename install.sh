@@ -12,7 +12,7 @@ sudo -v
 while kill -0 "$$" 2>/dev/null ; do
 	sudo -v
     sleep 30
-done & 
+done &
 
 
 
@@ -152,22 +152,22 @@ echo "==========================================================================
 (
 	cd themes-icons
 	# extract themes
-	tar -xvf Prof-XFCE-2.1.tar.gz 
+	tar -xvf Prof-XFCE-2.1.tar.gz
 	tar -xvf Win11-round.tar.xz
-	tar -xvf Win11-round-Dark.tar.xz 
+	tar -xvf Win11-round-Dark.tar.xz
 	tar -xvf Win11-round-Light.tar.xz
-	
+
 	# extract icons
-	tar -xvf 01-Tela.tar.xz 
-		
+	tar -xvf 01-Tela.tar.xz
+
 	mkdir -p ~/.local/share/icons
 	mkdir -p ~/.local/share/themes/
 	mv Prof--XFCE-\ 2.1/ ~/.local/share/themes/
 	mv Win11-round*/ ~/.local/share/themes/
 	sudo mv Tela*/ /usr/share/icons/
-	
+
 	cd ..
-	
+
 
 ) >> "$LOG_FILE" 2>&1
 
@@ -249,10 +249,10 @@ echo "==========================================================================
 
 (
      # installing Fish shell
-    ./fish/install.sh
+    ./scripts/fish/install.sh
 
     # installing Bibita cursor
-    ./bibita-cursor.sh
+    ./scripts/bibita-cursor.sh
 ) >> "$LOG_FILE" 2>&1
 
 

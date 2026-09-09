@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "Enter the sudo password:"
 sudo -v
@@ -9,9 +9,9 @@ cd ~/temp/
 wget https://ziglang.org/download/0.16.0/zig-x86_64-linux-0.16.0.tar.xz
 tar -xvf zig*.tar.xz
 cd zig-x86_64-linux-0.16.0/
-bat README.md
+# bat README.md
 
-sudo mkdir /usr/local/bin/doc
+sudo mkdir -p /usr/local/bin/doc
 sudo mkdir -p /usr/local/lib/zig
 
 sudo mv zig /usr/local/bin/.
