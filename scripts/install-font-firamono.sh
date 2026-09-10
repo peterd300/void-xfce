@@ -1,21 +1,27 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
-sudo xbps-install -Sy wget unzip fontconfig fc-cache
+sudo xbps-install -Sy wget unzip fontconfig 
 
 
-set -Eeu pipefail
+set -Eeu 
+set -o pipefail
 
 font="FiraMono"
-tempdir="$HOME/temp"
 fontdir="$HOME/.local/share/fonts/$font"
 # fontdir="$/usr/share/fonts/$font"
-log_file="$HOME/${font}.log"
+
+logdir="$HOME/log"
+log_file="$logdir/${font}.log"
+
+tempdir="$HOME/temp"
 zipfile="$tempdir/${font}.zip"
+
 extractdir="$tempdir/$font"
 url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
 
 exec > >(tee -a "$log_file") 2>&1
 
+mkdir -p "$logdir"
 mkdir -p "$tempdir"
 mkdir -p "$fontdir"
 

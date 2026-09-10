@@ -1,21 +1,28 @@
-#!/usr/bash
+#!/usr/bin/bash
 
 sudo xbps-install -Sy wget unzip fontconfig 
 
 
-set -Eeu pipefail
+set -Eeu 
+set -o pipefail
 
 font="HackNerd"
-tempdir="$HOME/temp"
+
 fontdir="$HOME/.local/share/fonts/$font"
 # fontdir="$/usr/share/fonts/$font"
-log_file="$HOME/${font}.log"
-zipfile="$tempdir/Hack.zip"
+
+logdir="$HOME/log"
+log_file="$logdir/${font}.log"
+
+zipfile="$tempdir/${font}.zip"
+tempdir="$HOME/temp"
+
 extractdir="$tempdir/Hack"
 url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip"
 
 exec > >(tee -a "$log_file") 2>&1
 
+mkdir -p "$logdir"
 mkdir -p "$tempdir"
 mkdir -p "$fontdir"
 
