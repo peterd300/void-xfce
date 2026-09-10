@@ -46,7 +46,7 @@ echo "Refreshing font cache..."
 fc-cache -f
 
 echo "Installed fonts:"
-fc-list | grep -i $font" || true
+fc-list | grep -i $font || true
 
 echo "Installation complete."
 echo "Downloaded ZIP: $zipfile"

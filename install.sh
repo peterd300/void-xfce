@@ -1,7 +1,9 @@
 !/usr/bin/env bash
 
 # Define the log file and clear it out at startup
-LOG_FILE="install.log"
+LOG_FILE="$HOME/log/install.log"
+mkdir -p "$HOME/log"
+
 > "$LOG_FILE"
 
 # Cache sudo credentials upfront so password prompts don't get hidden inside logs
@@ -150,23 +152,8 @@ echo "==========================================================================
 echo "[11/15] Install XFCE Themes + Icons..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 (
-	cd themes-icons
-	# extract themes
-	tar -xvf Prof-XFCE-2.1.tar.gz
-	tar -xvf Win11-round.tar.xz
-	tar -xvf Win11-round-Dark.tar.xz
-	tar -xvf Win11-round-Light.tar.xz
 
-	# extract icons
-	tar -xvf 01-Tela.tar.xz
-
-	mkdir -p ~/.local/share/icons
-	mkdir -p ~/.local/share/themes/
-	mv Prof--XFCE-\ 2.1/ ~/.local/share/themes/
-	mv Win11-round*/ ~/.local/share/themes/
-	sudo mv Tela*/ /usr/share/icons/
-
-	cd ..
+./scripts/win11-theme.sh
 
 
 ) >> "$LOG_FILE" 2>&1
@@ -187,46 +174,8 @@ echo "==========================================================================
 echo "[12.2/15] Installing Jetbrain (Nerd) System and other fonts..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
-
 (
-
-# obsolete
-<< ////
-'mkdir -p ./fonts
-cd ./fonts
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.zip
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/IosevkaTerm.zip
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-wget -q https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip
-
-unzip ./Hack.zip -d ./Hack
-unzip ./FiraCode.zip -d ./FiraCode
-unzip ./FiraMono.zip -d ./FiraMono
-unzip ./Iosevka.zip -d ./Iosevka
-unzip ./IosevkaTerm.zip -d ./IosevkaTerm
-unzip ./JetBrainsMono.zip -d ./JetBrainsNerdMono
-unzip ./JetBrainsMono-2.304.zip -d ./JetBrainsMono
-
-
-mkdir -p ~/.local/share/fonts/{HackNerd,FiraCode,FiraMono,Iosevka,IosevkaTerm,JetBrainsNerdMono,JetBrainsMono}
-
-mv ./Hack/*.ttf  ~/.local/share/fonts/HackNerd
-mv ./FiraCode/*.ttf  ~/.local/share/fonts/FiraCode
-mv ./FiraMono/*.?tf  ~/.local/share/fonts/FiraMono
-mv ./Iosevka/*.ttf  ~/.local/share/fonts/Iosevka
-mv ./IosevkaTerm/*.ttf  ~/.local/share/fonts/IosevkaTerm
-mv ./JetBrainsNerdMono/*.ttf  ~/.local/share/fonts/JetBrainsNerdMono
-mv ./JetBrainsMono/fonts/ttf/*.ttf ~/.local/share/fonts/JetBrainsMono
-
-
-fc-cache -f -v
-cd ..
-rm -rf ./fonts/
-////
-# comment out fonts, do don't need or use
+# comment out fonts, if you don't need or use them
 
 ./scripts/install-font-firacode.sh
 ./scripts/install-font-firamono.sh
@@ -239,8 +188,6 @@ rm -rf ./fonts/
 
 ) >> "$LOG_FILE" 2>&1
 sleep 2
-
-
 
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
@@ -270,6 +217,7 @@ echo "==========================================================================
 
     # installing Bibita cursor
     ./scripts/bibita-cursor.sh
+
 ) >> "$LOG_FILE" 2>&1
 
 
