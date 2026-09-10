@@ -189,7 +189,10 @@ echo "==========================================================================
 
 
 (
-mkdir -p ./fonts
+
+# obsolete
+<< ////
+'mkdir -p ./fonts
 cd ./fonts
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
@@ -222,9 +225,22 @@ mv ./JetBrainsMono/fonts/ttf/*.ttf ~/.local/share/fonts/JetBrainsMono
 fc-cache -f -v
 cd ..
 rm -rf ./fonts/
+////
+# comment out fonts, do don't need or use
+
+./scripts/install-font-firacode.sh
+./scripts/install-font-firamono.sh
+./scripts/install-font-hacknerd.sh
+./scripts/install-font-iosevka.sh
+./scripts/install-font-iosevkaterm.sh
+./scripts/install-font-jetbrainsmono.sh
+./scripts/install-font-jetbrainsnerd-mono.sh
+
 
 ) >> "$LOG_FILE" 2>&1
 sleep 2
+
+
 
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
