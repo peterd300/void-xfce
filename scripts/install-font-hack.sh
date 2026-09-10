@@ -7,15 +7,14 @@ set -Eeu
 set -o pipefail
 
 font="HackNerd"
-
 fontdir="$HOME/.local/share/fonts/$font"
 # fontdir="$/usr/share/fonts/$font"
 
 logdir="$HOME/log"
 log_file="$logdir/${font}.log"
 
-zipfile="$tempdir/${font}.zip"
 tempdir="$HOME/temp"
+zipfile="$tempdir/${font}.zip"
 
 extractdir="$tempdir/Hack"
 url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip"

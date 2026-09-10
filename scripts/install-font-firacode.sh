@@ -10,14 +10,13 @@ font="FiraCode"
 fontdir="$HOME/.local/share/fonts/$font"
 # fontdir="$/usr/share/fonts/$font"
 
-tempdir="$HOME/temp"
-extractdir="$tempdir/$font"
-
 logdir="$HOME/log"
 log_file="$logdir/${font}.log"
 
+tempdir="$HOME/temp"
 zipfile="$tempdir/${font}.zip"
 
+extractdir="$tempdir/$font"
 url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip"
 
 exec > >(tee -a "$log_file") 2>&1
