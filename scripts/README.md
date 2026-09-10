@@ -1,6 +1,6 @@
 # Script directory
 
-Several use scripts to install programs, utils which are not avaible in the offical repo/
+Several use scripts to install programs and utils which are not avaible in the offical repo
 
 
 ## Programs
@@ -17,8 +17,10 @@ Seperated scripts for install fonts:
 - Firacode
 - Hacknerd
 
-## Icons
-- Bibita cursor themes
+## Icons & Themes
+- Bibita cursor theme
+- Tela icons
+- Win 11 theme
 
 ## Games
 - Doom		- Doom game, just for fun
