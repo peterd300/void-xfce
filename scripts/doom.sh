@@ -18,7 +18,7 @@ mkdir -p ~/games
 cd games
 
 
-wget https://raw.githubusercontent.com/Akbar30Bill/DOOM_wads/refs/heads/master/doom.wad
-wget https://raw.githubusercontent.com/Akbar30Bill/DOOM_wads/refs/heads/master/doom2.wad
+wget -q https://raw.githubusercontent.com/Akbar30Bill/DOOM_wads/refs/heads/master/doom.wad
+wget -q https://raw.githubusercontent.com/Akbar30Bill/DOOM_wads/refs/heads/master/doom2.wad
 sleep 3
 # echo "Start gzdoom from this directory ~/games/."
