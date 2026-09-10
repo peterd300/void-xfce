@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo xbps-install -Sy wget unzip fontconfig
+sudo xbps-install -Sy wget unzip fontconfig fc-cache
 
 
 set -Eeuo pipefail
