@@ -3,26 +3,28 @@
 sudo xbps-install -Sy wget unzip fontconfig fc-cache
 
 
-set -Eeuo pipefail
+set -Eeu pipefail
 
-font="HackNerd"
+font="FiraMono"
 tempdir="$HOME/temp"
 fontdir="$HOME/.local/share/fonts/$font"
+# fontdir="$/usr/share/fonts/$font"
 log_file="$HOME/${font}.log"
-zipfile="$tempdir/Hack.zip"
-extractdir="$tempdir/Hack"
+zipfile="$tempdir/${font}.zip"
+extractdir="$tempdir/$font"
+url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
 
 exec > >(tee -a "$log_file") 2>&1
 
 mkdir -p "$tempdir"
 mkdir -p "$fontdir"
 
-echo "Downloading Hack Nerd Font to: $zipfile"
+echo "Downloading $font font to: $zipfile"
 
 wget \
-    --progress=bar:force \
+    -q \
     -O "$zipfile" \
-    "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip"
+    "$url"
 
 rm -rf "$extractdir"
 mkdir -p "$extractdir"
