@@ -6,6 +6,8 @@ sudo ln -sf /etc/sv/nanoklogd /var/service/
 
 sudo sv status fail2ban
 sudo sv status socklog-unix
+sudo sv status nanoklogd
+
 
 sudo tee /etc/fail2ban/jail.local > /dev/null << 'EOF'
 [DEFAULT]
@@ -35,3 +37,10 @@ EOF
 
 
 # sudo sed -i 's|logpath = .*|logpath = /var/log/socklog/auth/current|' /etc/fail2ban/jail.local
+
+
+# enable log rotation for socklog files. Max 5 files, max 1MB size
+sudo sh -c "for f in /var/log/socklog/*/config; do sed -i '1s/^/s1048576\nn5\n/' \"\$f\"; done"
+
+# re apply log settings
+sudo sv hup socklog-unix

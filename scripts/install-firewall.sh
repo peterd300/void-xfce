@@ -25,6 +25,8 @@ sudo ufw default allow outgoing
 #enable inbound ssh traffic.
 sudo ufw allow 2222/tcp
 
+# enable logging
+sudo ufw logging low
 
 # enable firewall
 sudo ufw enable
@@ -54,3 +56,5 @@ EOF
 
 # apply settings
 sudo sysctl -p /etc/sysctl.d/99-hardening.conf
+
+
