@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script install UFW firewall and modify some sshd settings 
+# Script install UFW firewall and modify some sshd settings
 
 
 sudo xbps-install -Sy ufw gufw
@@ -24,8 +24,7 @@ sudo ufw default allow outgoing
 
 #enable inbound ssh traffic.
 sudo ufw allow 2222/tcp
-# sudo ufw delete allow 22/tcp
-sudo ufw limit ssh
+
 
 # enable firewall
 sudo ufw enable
