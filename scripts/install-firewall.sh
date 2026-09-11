@@ -2,6 +2,13 @@
 # Script install UFW firewall and modify some sshd settings
 
 
+file="firewall"
+logdir="$HOME/log"
+mkdir -p $logdir
+log_file="$logdir/$file.log"
+
+exec > >(tee -a "$log_file") 2>&1
+
 sudo xbps-install -Sy ufw gufw
 
 # Change SSH port to 2222

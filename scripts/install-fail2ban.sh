@@ -1,4 +1,14 @@
-sudo xbps-install -Sy fail2ban socklog socklog-void daemontools
+#!/bin/bash
+# install fail2bain and socklog and 
+
+file="fail2ban"
+logdir="$HOME/log"
+mkdir -p $logdir
+log_file="$logdir/$file.log"
+
+exec > >(tee -a "$log_file") 2>&1
+
+sudo xbps-install -Sy fail2ban socklog-void daemontools
 
 sudo ln -sf /etc/sv/fail2ban /var/service/
 sudo ln -sf /etc/sv/socklog-unix /var/service/
