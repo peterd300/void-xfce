@@ -219,7 +219,7 @@ echo "[14/15] Installing firewall with some rules ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
-	./scripts/firewall.sh
+	./scripts/install-firewall.sh
 
 )
 

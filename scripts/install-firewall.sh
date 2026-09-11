@@ -1,9 +1,16 @@
 #!/bin/bash
+# Script install UFW firewall and modify some sshd settings 
+
 
 sudo xbps-install -Sy ufw gufw
 
 # Change SSH port to 2222
 sudo sed -i 's/#Port 22/Port 2222/' /etc/ssh/sshd_config
+
+# enable SSHD logging
+sudo sed -i 's/#SyslogFacility AUTH/SyslogFacility AUTH/' /etc/ssh/sshd_config
+sudo sed -i 's/#LogLevel INFO/LogLevel VERBOSE/' /etc/ssh/sshd_config
+
 sudo sv restart sshd
 
 # enable ufw service
