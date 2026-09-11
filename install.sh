@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # Define the log file and clear it out at startup
 LOG_FILE="$HOME/log/install.log"
@@ -219,9 +219,10 @@ echo "[14/15] Installing firewall with some rules ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
+	# install ufw  firewall
 	./scripts/install-firewall.sh
 
-)
+) >> "$LOG_FILE" 2>&1
 
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 echo "[15/15] Deploying customized dotfiles and configuration sets..." | tee -a "$LOG_FILE"

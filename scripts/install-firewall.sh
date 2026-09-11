@@ -24,7 +24,7 @@ sudo ufw default allow outgoing
 
 #enable inbound ssh traffic.
 sudo ufw allow 2222/tcp
-sudo ufw delete allow 22/tcp
+# sudo ufw delete allow 22/tcp
 sudo ufw limit ssh
 
 # enable firewall
@@ -54,4 +54,4 @@ net.ipv4.conf.all.log_martians = 1
 EOF
 
 # apply settings
-sudo sysctl -p /etc/sysctl.d/99-hardening.conf.
+sudo sysctl -p /etc/sysctl.d/99-hardening.conf
