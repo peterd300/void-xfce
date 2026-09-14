@@ -23,7 +23,7 @@ readme() {
 
 # Weather
 weather() {
-    curl -s "https://wttr.in/${1:-Ponorogo}?m2F&format=v2"
+    curl -s "curl -s "https://wttr.in/${1:-Scheveningen}?m2F&format=v2"
 }
 
 # Get an information of IP address
@@ -73,9 +73,3 @@ git-remove-all-commit() {
     esac
 }
 
-# Start PHP server
-phpserver() {
-    local ip=localhost
-    local port="${1:-4000}"
-    php -S "${ip}:${port}"
-}

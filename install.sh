@@ -164,8 +164,9 @@ echo "==========================================================================
 echo "[12.2/15] Awesome fonts..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
+# fonts-noto-color-emoji for weather app in cli "weather"
 (
-    sudo xbps-install -Sy font-awesome
+    sudo xbps-install -Sy font-awesome fonts-noto-color-emoji
     # sudo xbps-install -Sy font-firacode font-iosevka font-awesome
 ) >> "$LOG_FILE" 2>&1
 
