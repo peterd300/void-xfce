@@ -65,7 +65,7 @@ echo "==========================================================================
 echo "[3/15] Installing core CLI utilities..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 (
-	sudo xbps-install -Sy delta htop btop make micro git wget xz zip unzip nano cmake curl gcc net-tools gping ncdu fastfetch mlocate glow bash-completion
+	sudo xbps-install -Sy delta htop btop make micro git wget xz zip unzip nano cmake curl gcc net-tools gping ncdu fastfetch mlocate glow bash-completion jq
 ) >> "$LOG_FILE" 2>&1
 sleep 2
 
@@ -80,7 +80,7 @@ echo "[5/15] Installing XFCE4 and some plugins ..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
-sudo xbps-install -Sy xfce4 xfce4-whiskermenu-plugin xfce4-sensors-plugin xfce4-panel-appmenu xfce4-pulseaudio-plugin  xfce4-clipman-plugin xfce4-weather-plugin >> "$LOG_FILE" 2>&1
+sudo xbps-install -Sy xfce4 xfce4-whiskermenu-plugin xfce4-sensors-plugin xfce4-panel xfce4-pulseaudio-plugin  xfce4-clipman-plugin xfce4-weather-plugin >> "$LOG_FILE" 2>&1
 
 ) >> "$LOG_FILE" 2>&1
 
@@ -166,7 +166,7 @@ echo "==========================================================================
 
 # fonts-noto-color-emoji for weather app in cli "weather"
 (
-    sudo xbps-install -Sy font-awesome fonts-noto-color-emoji
+    sudo xbps-install -Sy font-awesome noto-fonts-emoji
     # sudo xbps-install -Sy font-firacode font-iosevka font-awesome
 ) >> "$LOG_FILE" 2>&1
 

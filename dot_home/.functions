@@ -21,16 +21,17 @@ readme() {
     done
 }
 
-# Weather
 weather() {
-    curl -s "curl -s "https://wttr.in/${1:-Scheveningen}?m2F&format=v2"
+    curl -s "https://wttr.in/${1:-Scheveningen}?m2F&format=v2"
 }
+
 
 # Get an information of IP address
 ip-address() {
     curl -s -H "Accept: application/json" "https://ipinfo.io/${1:-}" | jq "del(.loc, .postal, .readme)" || \
     curl -s -H "Accept: application/json" "https://am.i.mullvad.net" | jq "del(.longitude, .latitude, .mullvad_exit_ip, .blacklisted)"
 }
+
 
 # Incognito mode
 incognito() {

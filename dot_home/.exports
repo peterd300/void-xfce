@@ -31,7 +31,7 @@ if [ "$(ps -p $$ -ocomm=)" = "bash" ]; then
     # History settings.
     export HISTTIMEFORMAT="%F %T "
     # include timestamps in the output of the history command
-	# HISTTIMEFORMAT="%d/%m/%y %T 
+	# HISTTIMEFORMAT="%d/%m/%y %T
     export HISTFILE=/home/$(whoami)/.bash_history
     export HISTCONTROL=ignoredups
     export HISTIGNORE="[bf]g:c:clear:e:exit:h:history:incognito:l:l[adfls]:pwd"
@@ -45,7 +45,7 @@ fi
 
 
 # bat.
-export BAT_THEME="Material-Theme-Darker"
+# export BAT_THEME="Material-Theme-Darker"
 
 # fzf.
 export FZF_DEFAULT_OPTS=" \
