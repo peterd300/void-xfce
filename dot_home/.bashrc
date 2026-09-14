@@ -1,47 +1,48 @@
 # .bashrc
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# Load our dotfiles.
+for file in ~/.{aliases,functions,exports}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
 
-# include timestamps in the output of the history command
-HISTTIMEFORMAT="%d/%m/%y %T "
+# Autocorrect typos in path names when using `cd`.
+shopt -s cdspell
+
+# Case-insensitive globbing (used in pathname expansion).
+shopt -s nocaseglob
+
+# Bash attempts to save all lines of a multiple-line command in the same history entry.
+# This allows easy re-editing of multi-line commands.
+shopt -s cmdhist
+
+# Check the window size after each command and, if necessary,
+# update the values of lines and columns.
+shopt -s checkwinsize
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTFILESIZE=50000
-export HISTSIZE=10000
-export HISTCONTROL=$HISTCONTROL:ignoreboth
-export HISTFILE=/home/$(whoami)/.bash_history
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
 
-# aliasses
 
-alias ..='cd ..'
-alias ...='cd ../..'
-#alias ls='ls --color=auto'
-#alias ll='ls -al --color=auto'
-alias ls='eza --group-directories-first --git'
-alias ll='eza -la --group-directories-first --git'
-alias e='micro'
-alias df='df -h'
-alias du='du -h'
-alias nano='nano -l'
-alias ff='fastfetch'
+# Bash completion.
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        source /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        source /etc/bash_completion
+    fi
+fi
 
-# xbps aliases
-alias xi='sudo xbps-install -Sy'
-alias xu='sudo xbps-install -Su'
-alias xq='sudo xbps-query -Rs'
+# dircolors.
+if [ -x "$(command -v dircolors)" ]; then
+    eval "$(dircolors -b ~/.dircolors)"
+fi
 
 
-# Git aliases
-alias gp="git push -u origin main"
-alias gsave="git commit -m 'save'"
-alias gm="git commit"
-alias gs="git status"
-alias gc="git clone"
 
 
 # PS1='[\u@\h \W]\$ '
@@ -49,9 +50,6 @@ alias gc="git clone"
 
 
 
-export PATH="$HOME/scripts:$HOME/.local/bin:$PATH"
-export EDITOR=$(command -v nvim || command -v micro || echo nano)
-export VISUAL="$EDITOR"
 
 #thanks to JustALinuxGuy
 # PS1 Customization
