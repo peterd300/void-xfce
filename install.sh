@@ -153,7 +153,7 @@ echo "[12.1/15] Install XFCE Themes + Icons..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 (
 
-./scripts/win11-theme.sh
+./scripts/install-win11themes.sh
 
 
 ) >> "$LOG_FILE" 2>&1
@@ -167,7 +167,7 @@ echo "==========================================================================
 # fonts-noto-color-emoji for weather app in cli "weather"
 (
     sudo xbps-install -Sy font-awesome noto-fonts-emoji
-    # sudo xbps-install -Sy font-firacode font-iosevka font-awesome
+    
 ) >> "$LOG_FILE" 2>&1
 
 
