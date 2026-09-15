@@ -30,9 +30,16 @@ mv "Prof--XFCE- 2.1/" ~/.local/share/themes/
 mv Win11-round*/ ~/.local/share/themes/
 mv Desert-Teal*/ ~/.local/share/themes/
 
-# install icons 
+# install icons
 mv Tela*/ ~/.local/share/icons/
 mv Fluent*/ ~/.local/share/icons/
+
+
+# update icons cache
+for dir in ~/.local/share/icons/*/; do
+    gtk-update-icon-cache -f -t "$dir"
+done
+
 
 cd ..
 
