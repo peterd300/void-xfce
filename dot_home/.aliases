@@ -60,7 +60,7 @@ alias c='clear'
 alias cat='bat'
 alias ch='echo > ~/.bash_history && echo > ~/.zsh_history'
 
-alias ff='fastfetch'
+# alias ff='fastfetch'
 alias htop-user='htop -u "$USER"'
 # alias mdv='glow -p -s ~/.config/glow/Material-Theme-Darker.json'
 alias n='nnn'
