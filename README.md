@@ -33,12 +33,35 @@ Custom install script for Void-Linux, with custom XFCE desktop.
 
 
 
-Icon used : Tela Icons
-https://www.xfce-look.org/p/1279924/
-
-Theme used: Win11 GTK Theme
-https://www.gnome-look.org/p/2278411
+# Icons used :
+- Tela Icons						https://www.xfce-look.org/p/1279924/
 
 
-Ly - Ncurse Display manager (todo)
-https://github.com/drozdowsky/ly-void
+# Themes :
+- Theme used: Win11 GTK Theme		https://www.gnome-look.org/p/2278411
+- Desert-XFCE-4.16 Edition			https://www.xfce-look.org/p/1482698
+									https://www.xfce-look.org/p/1449286
+
+
+
+
+
+## Used some dotfiles, .aliasses and .functions from dikiaap
+https://github.com/dikiaap/dotfiles
+
+
+
+## Check out this links:
+https://github.com/vinceliuice/Fluent-icon-theme.git
+https://github.com/florintanasa/brgvos-void
+
+
+Install several icons
+## Papirus Icons
+'''bash
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+'''
+
+
+## Zafiro icons
+wget -N https://raw.githubusercontent.com/zayronxio/Zafiro-icons/master/Install-Zafiro-Icons.sh && chmod +x Install-Zafiro-Icons.sh && bash ./Install-Zafiro-Icons.sh

@@ -153,8 +153,8 @@ echo "[12.1/15] Install XFCE Themes + Icons..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 (
 
-./scripts/install-win11themes.sh
-
+./scripts/install-icons-themes.sh
+./scripts/install-win10-themes.sh
 
 ) >> "$LOG_FILE" 2>&1
 
