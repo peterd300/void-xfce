@@ -157,7 +157,7 @@ echo "==========================================================================
 
 ./scripts/install-icons-themes.sh
 ./scripts/install-win10-themes.sh
-
+./scripts/install-zafiro-icons.sh
 ) >> "$LOG_FILE" 2>&1
 
 
