@@ -105,6 +105,12 @@
       <property name="category-icon-size" type="int" value="2"/>
       <property name="button-icon" type="string" value="void-logo"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="xfce4-color-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="chromium.desktop"/>
+        <value type="string" value="btop.desktop"/>
+        <value type="string" value="xfce4-sensors.desktop"/>
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
         <value type="string" value="xfce4-screensaver-preferences.desktop"/>
       </property>
@@ -112,7 +118,7 @@
       <property name="position-categories-horizontal" type="bool" value="false"/>
       <property name="position-categories-alternate" type="bool" value="true"/>
       <property name="default-category" type="int" value="1"/>
-      <property name="menu-width" type="int" value="400"/>
+      <property name="menu-width" type="int" value="827"/>
       <property name="menu-opacity" type="int" value="91"/>
       <property name="launcher-show-name" type="bool" value="true"/>
       <property name="launcher-show-tooltip" type="bool" value="false"/>

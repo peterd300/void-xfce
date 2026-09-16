@@ -9,7 +9,8 @@ cd "$HOME/temp"
 
 
 wget -N https://github.com/zayronxio/Zafiro-icons/archive/refs/heads/master.zip
-unzip master.zip 
+
+unzip -oq master.zip 
 
 mv -i ./Zafiro-icons-master/Dark/ $HOME/.local/share/icons/Zafiro-Dark
 mv -i ./Zafiro-icons-master/Light/ $HOME/.local/share/icons/Zafiro-Light

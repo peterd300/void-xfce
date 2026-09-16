@@ -59,7 +59,7 @@
     <property name="snap_to_windows" type="bool" value="false"/>
     <property name="snap_width" type="int" value="10"/>
     <property name="vblank_mode" type="string" value="auto"/>
-    <property name="theme" type="string" value="Win11-round-Dark"/>
+    <property name="theme" type="string" value="Desert-Teal-Blue-XFCE-1.3"/>
     <property name="tile_on_move" type="bool" value="true"/>
     <property name="title_alignment" type="string" value="center"/>
     <property name="title_font" type="string" value="IosevkaTerm Nerd Font Propo Medium 10"/>
