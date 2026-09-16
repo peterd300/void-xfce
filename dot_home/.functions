@@ -74,3 +74,66 @@ git-remove-all-commit() {
     esac
 }
 
+
+# Searches for text in all files in the current folder
+ftext() {
+	# -i case-insensitive
+	# -I ignore binary files
+	# -H causes filename to be printed
+	# -r recursive search
+	# -n causes line number to be printed
+	# optional: -F treat search term as a literal, not a regular expression
+	# optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
+	grep -iIHrn --color=always "$1" . | less -r
+}
+
+
+ Copy file with a progress bar
+cpp() {
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: cpp SOURCE DESTINATION"
+		return 2
+	fi
+	if ! command -v strace >/dev/null 2>&1; then
+		echo "cpp requires strace."
+		return 1
+	fi
+	strace -q -ewrite cp -- "$1" "$2" 2>&1 |
+		awk '{
+		count += $NF
+		if (count % 10 == 0 && total_size > 0) {
+			percent = int(count / total_size * 100)
+			if (percent > 100) percent = 100
+			printf "%3d%% [", percent
+			for (i=0;i<=percent;i++)
+				printf "="
+			printf ">"
+			for (i=percent;i<100;i++)
+				printf " "
+			printf "]\r"
+		}
+	}
+	END { print "" }' total_size="$(_bashrc_file_size "$1")" count=0
+}
+
+
+# GitHub Titus Additions
+
+gcom() {
+	if [ -z "$1" ]; then
+		echo "Usage: gcom \"commit message\""
+		return 2
+	fi
+	git add .
+	git commit -m "$1"
+}
+
+lazyg() {
+	if [ -z "$1" ]; then
+		echo "Usage: lazyg \"commit message\""
+		return 2
+	fi
+	git add .
+	git commit -m "$1"
+	git push
+}

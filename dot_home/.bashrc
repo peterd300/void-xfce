@@ -70,10 +70,13 @@ ENDC="\\[\\e[0m\\]"
 if [[ -n "$SSH_CLIENT" ]]; then ssh_message="-ssh_session"; fi
 PS1="${GREEN}\u ${WHITE}at ${YELLOW}\h${RED}${ssh_message} ${WHITE}in ${BLUE}\w \n${CYAN}\$${ENDC} "
 
-
-
-# init starship promtp
-eval "$(starship init bash)"
+# init starship prompt
+if [[ $- == *i* ]] && command -v starship >/dev/null 2>&1; then
+	eval "$(starship init bash)"
+fi
 
 # Init zoxide
-eval "$(zoxide init bash)"
+if [[ $- == *i* ]] && command -v zoxide >/dev/null 2>&1; then
+	eval "$(zoxide init bash)"
+fi
+
