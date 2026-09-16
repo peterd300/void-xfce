@@ -87,8 +87,7 @@ ftext() {
 	grep -iIHrn --color=always "$1" . | less -r
 }
 
-
- Copy file with a progress bar
+# Copy file with a progress bar
 cpp() {
 	if [ "$#" -ne 2 ]; then
 		echo "Usage: cpp SOURCE DESTINATION"

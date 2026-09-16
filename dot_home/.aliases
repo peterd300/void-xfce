@@ -13,7 +13,7 @@ alias 4='cd -4'
 alias 5='cd -5'
 
 # Easy report
-# alias grep='grep --color=auto'
+alias grep='grep --color=auto'
 # alias l='ls -l'
 # alias la='ls -lA'
 #alias lr='ls -R'
@@ -25,16 +25,10 @@ alias 5='cd -5'
 alias ll='eza -la --group-directories-first --git'
 
 #chris titus aliasses
-alias lx='ls -lXBh'               # sort by extension
-alias lk='ls -lSrh'               # sort by size
-alias lc='ls -ltcrh'              # sort by change time
-alias lu='ls -lturh'              # sort by access time
-alias lr='ls -lRh'                # recursive ls
-alias lt='ls -ltrh'               # sort by date
+alias ls='ls --color=auto'
 alias lm='ls -alh |more'          # pipe through 'more'
 alias lw='ls -xAh'                # wide listing format
 alias ll='ls -Fls'                # long listing format
-alias labc='ls -lap'              # alphabetical sort
 alias lf="ls -l | grep -Ev '^d'"  # files only
 alias ldir="ls -l | grep -E '^d'" # directories only
 alias lla='ls -Al'                # List and Hidden Files
@@ -57,9 +51,8 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias ln='ln -iv'
 alias mkdir='mkdir -v'
-alias rm='rm -i'
-alias rmf='rm -rf'
-alias p='ps axo pid,user,pcpu,comm'
+#alias rm='rm -i'
+#alias rmf='rm -rf'
 alias uptime='uptime -p'
 alias free='free -h'
 alias disk='df -h | grep sd \
@@ -91,6 +84,19 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%
 alias checkcommand="type -t"
 
 
+# replace rm -with trash, safe deletions
+if command -v trash-put >/dev/null 2>&1; then
+	alias rm='trash-put'
+elif command -v trash >/dev/null 2>&1; then
+	alias rm='trash -v'
+elif command -v gio >/dev/null 2>&1; then
+	alias rm='gio trash'
+else
+	alias rm='rm -i'
+fi
+
+
+
 # Developer shortcuts
 alias g='git'
 alias v='nvim'
@@ -116,7 +122,7 @@ alias xq='sudo xbps-query -Rs'
 # Git aliases
 alias gp="git push -u origin main"
 alias gsave="git commit -m 'save'"
-alias gm="git commit"
+alias gm="git commit -m" $1
 alias gs="git status"
 alias gc="git clone"
 
