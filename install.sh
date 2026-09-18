@@ -121,7 +121,7 @@ echo "[8/15] Installing some X11 applications..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
-    sudo xbps-install -Sy falkon kitty flameshot gmrun xbindkeys xdotool xev gpick arandr gpick CopyQ zathura zathura-cb zathura-pdf-mupdf
+    sudo xbps-install -Sy falkon kitty ghostty flameshot gmrun xbindkeys xdotool xev gpick arandr gpick CopyQ zathura zathura-cb zathura-pdf-mupdf
     mkdir -p ~/screenshots
 ) >> "$LOG_FILE" 2>&1
 
@@ -156,8 +156,10 @@ echo "==========================================================================
 (
 
 ./scripts/install-icons-themes.sh
-./scripts/install-win10-themes.sh
-./scripts/install-zafiro-icons.sh
+./scripts/install-win10-theme.sh
+# ./scripts/install-zafiro-icons.sh
+./scripts/install-oxygen-icons.sh
+
 ) >> "$LOG_FILE" 2>&1
 
 
@@ -180,12 +182,12 @@ echo "==========================================================================
 (
 # comment out fonts, if you don't need or use them
 
-./scripts/install-font-firacode.sh
-./scripts/install-font-firamono.sh
-./scripts/install-font-hacknerd.sh
+# ./scripts/install-font-firacode.sh
+# ./scripts/install-font-firamono.sh
+# ./scripts/install-font-hacknerd.sh
 ./scripts/install-font-iosevka.sh
 ./scripts/install-font-iosevkaterm.sh
-./scripts/install-font-jetbrainsmono.sh
+# ./scripts/install-font-jetbrainsmono.sh
 ./scripts/install-font-jetbrainsnerd-mono.sh
 
 
