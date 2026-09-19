@@ -63,6 +63,7 @@
         <value type="string" value="geany"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="octoxbps-notifier"/>
         <value type="string" value="flameshot"/>
         <value type="string" value="CopyQ_copyq"/>
       </property>
@@ -105,12 +106,13 @@
       <property name="category-icon-size" type="int" value="2"/>
       <property name="button-icon" type="string" value="void-logo"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce4-sensors.desktop"/>
+        <value type="string" value="octoxbps-notifier.desktop"/>
+        <value type="string" value="octoxbps.desktop"/>
+        <value type="string" value="btop.desktop"/>
         <value type="string" value="xfce4-settings-editor.desktop"/>
         <value type="string" value="xfce4-color-settings.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="chromium.desktop"/>
-        <value type="string" value="btop.desktop"/>
-        <value type="string" value="xfce4-sensors.desktop"/>
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
         <value type="string" value="xfce4-screensaver-preferences.desktop"/>
       </property>

@@ -121,7 +121,7 @@ echo "[8/15] Installing some X11 applications..." | tee -a "$LOG_FILE"
 echo "========================================================================================================" >> "$LOG_FILE" 2>&1
 
 (
-    sudo xbps-install -Sy falkon kitty ghostty flameshot gmrun xbindkeys xdotool xev gpick arandr gpick CopyQ zathura zathura-cb zathura-pdf-mupdf
+    sudo xbps-install -Sy falkon kitty ghostty flameshot gmrun xbindkeys xdotool xev gpick arandr gpick CopyQ zathura zathura-cb zathura-pdf-mupdf octoxbps
     mkdir -p ~/screenshots
 ) >> "$LOG_FILE" 2>&1
 
