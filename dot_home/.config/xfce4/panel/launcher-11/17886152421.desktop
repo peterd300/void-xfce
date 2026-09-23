@@ -1,0 +1,28 @@
+[Desktop Entry]
+Name=Falkon
+Type=Application
+Icon=falkon
+Categories=Network;WebBrowser;
+Comment=A fast and secure web browser
+GenericName=Web Browser
+Exec=falkon %u
+StartupWMClass=Falkon
+MimeType=text/html;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-mimearchive;
+Terminal=false
+Actions=NewTab;NewWindow;PrivateBrowsing;
+X-XFCE-Source=file:///usr/share/applications/org.kde.falkon.desktop
+
+[Desktop Action NewTab]
+Name=Open new tab
+Icon=tab-new
+Exec=falkon --new-tab
+
+[Desktop Action NewWindow]
+Name=Open new window
+Icon=window-new
+Exec=falkon --new-window
+
+[Desktop Action PrivateBrowsing]
+Name=Start private browsing
+Icon=view-private
+Exec=falkon --private-browsing
